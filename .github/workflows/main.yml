@@ -16,11 +16,13 @@ jobs:
             - name: Adicionando comentário
               id: comment_step
               #uses: joaohfm86/action-js@main
-              uses: joaohfm86/action-composite@main
+              #uses: joaohfm86/action-composite@main
+              uses: joaohfm86/action-docker@main
               with:
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                 issue-id: ${{ github.event.issue.number }}
                 comment: "Teste de comentário"
+                GITHUB_REPOSITORY: ${{ github.repository }}
             - name: Mostrar o ID do comentário
               run: |
                 echo 'ID do comentário é: ${{ steps.comment_step.outputs.comment-id }}'
