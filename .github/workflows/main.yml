@@ -15,7 +15,8 @@ jobs:
         steps:
             - name: Adicionando comentário
               id: comment_step
-              uses: joaohfm86/action-js@main
+              #uses: joaohfm86/action-js@main
+              uses: joaohfm86/action-composite@main
               with:
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                 issue-id: ${{ github.event.issue.number }}
