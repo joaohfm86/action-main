@@ -17,7 +17,7 @@ jobs:
               id: comment_step
               #uses: joaohfm86/action-js@main
               #uses: joaohfm86/action-composite@main
-              uses: joaohfm86/action-docker@main
+              uses: joaohfm86/action-docker@v2.0.0
               with:
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                 issue-id: ${{ github.event.issue.number }}
